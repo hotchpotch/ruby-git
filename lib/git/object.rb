@@ -59,8 +59,8 @@ module Git
         @base.lib.grep(string, grep_options)
       end
       
-      def diff(objectish = nil)
-        Git::Diff.new(@base, @objectish, objectish || "#{@objectish}^")
+      def diff(objectish)
+        Git::Diff.new(@base, @objectish, objectish)
       end
       
       def log(count = 30)
